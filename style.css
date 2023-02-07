@@ -1,6 +1,11 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;800;900&display=swap');
 
+      /* #01e4d9 svetlo plava rgba(1,228,217,255)
+      #081945    tamno plava  rgba(8,25,69,255)
+      #b6bac6    siva         rgba(182,186,198,255)*/
+
+
 
 body {
     font-family: 'Heebo', sans-serif; 
@@ -14,16 +19,18 @@ nav {
     background-color: #1f184e;
 }
 
-li, a, button, h2 {
-    font-weight: 500;
-    font-size: 1.2rem;
+li, a, button, h1 {
+    font-weight: 400;
+    font-size: 0.7rem;
     text-decoration: none;
     color:white;
 }
 
 .logo h2 {
     font-size: 1.5rem;
+    font-weight: 800;
     margin: 0;
+    color: white;
 }
 
 .logo {
@@ -35,11 +42,13 @@ li, a, button, h2 {
 
 .menu {
     list-style: none;
+    margin: 0 1rem;
+    padding-right: 40px;
 }
 
 .menu li {
     display: inline-block;
-    padding: 0px 0.3rem;
+    padding: 0 0.3rem;
 }
 
 .menu a:hover {
@@ -49,14 +58,194 @@ li, a, button, h2 {
 
 
 #logo {
-    width: 3rem;
+    width: 2.5rem;
     height: auto;
 }
 
+button {
+    padding: 0.5rem 1.8rem;
+    border: 0.05rem solid;
+    border-radius: 0.5rem;
+    border-color: #01e4d9;
+    background-color: #1f184e;
+    color:#01e4d9;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+}
+
+.light { 
+    background-color: #01e4d9;
+    color: #1f184e;
+}
 
 
 .hero {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background-color: #1f184e;
-    height: 100vh;
-    width: 100vw;
 }
+
+.hero img {
+    width:20rem;
+    height: auto;
+}
+
+.hero h1, p {
+    color: white;
+}
+
+.hero p {
+    font-size: 0.5rem;
+    color: #b6bac6;
+}
+
+.hero h1 {
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    margin-top: 3rem;
+    display:flex;
+    gap: 1rem;
+}
+
+.sponsors {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f184e;
+    gap: 5rem;
+    padding: 3rem 0;
+    
+}
+
+.sponsors img{
+    filter: grayscale(1);
+    width: 8rem;
+    height: 2rem;
+}
+
+.logo1 img{
+    object-fit: cover;
+}
+.logo2 img{
+    object-fit: cover;
+}
+
+.who-we-are {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f184e;
+    padding-bottom: 2rem;
+}
+
+.who-we-are > div {
+    width: 50%;
+}
+
+.who-text {
+    display:flex;
+    flex-direction: column;
+    padding-right: 10rem;
+}
+
+.etherium {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-we-are img {
+    width: 20rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.who-we-are h1, p {
+    color: white;
+}
+
+.who-we-are p {
+    font-size: 0.5rem;
+    color: #b6bac6;
+}
+
+.who-we-are h1 {
+    font-size: 1.2rem;
+}
+
+.learn-more {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 780px) {
+
+    .hero {
+        flex-direction: column;
+
+    }
+
+    .hero-text {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center; 
+        
+    }
+
+    .hero-buttons button {
+        min-width: 320px;
+    }
+
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .sponsors {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width:100%;
+    }
+
+    .who-we-are {
+        flex-direction: column;
+        gap:3rem;
+    }
+
+    .who-text {
+        width: 100%;
+        padding-right: 0;
+    }
+    .who-text h1,p {
+        text-align: center;
+    }
+    
+    .who-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .who-we-are button {
+        align-items: center;
+        min-width: 320px;
+    }
+    .who-we-are > div {
+        width: 80%;
+    }
+/* POSLEDNJI BUTTON CENTRIJRAJ */
+    .learn-more {
+        align-items: center;
+
+    }
