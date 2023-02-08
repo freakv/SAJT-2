@@ -5,8 +5,6 @@
       #081945    tamno plava  rgba(8,25,69,255)
       #b6bac6    siva         rgba(182,186,198,255)*/
 
-
-
 body {
     font-family: 'Heebo', sans-serif; 
 }
@@ -19,7 +17,7 @@ nav {
     background-color: #1f184e;
 }
 
-li, a, button, h1 {
+li, a, button {
     font-weight: 400;
     font-size: 0.7rem;
     text-decoration: none;
@@ -55,7 +53,19 @@ li, a, button, h1 {
     color: grey;
 }
 
+.hamburger {
+    display:none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap:0.4rem;
+}
 
+.ham-lines {
+    height: 0.25rem;
+    width: 2.1rem;
+    background-color:#01e4d9;
+}
 
 #logo {
     width: 2.5rem;
@@ -82,8 +92,9 @@ button {
 
 .hero {
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding:0 10%;
     background-color: #1f184e;
 }
 
@@ -106,20 +117,21 @@ button {
 }
 
 .hero-buttons {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display:flex;
     gap: 1rem;
 }
 
 .sponsors {
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 2rem 10%;
     align-items: center;
     background-color: #1f184e;
-    gap: 5rem;
-    padding: 3rem 0;
     
 }
+
+/* kako zasiviti crnu boju */
 
 .sponsors img{
     filter: grayscale(1);
@@ -136,26 +148,10 @@ button {
 
 .who-we-are {
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #1f184e;
-    padding-bottom: 2rem;
-}
-
-.who-we-are > div {
-    width: 50%;
-}
-
-.who-text {
-    display:flex;
-    flex-direction: column;
-    padding-right: 10rem;
-}
-
-.etherium {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0 10%;
 }
 
 .who-we-are img {
@@ -183,13 +179,11 @@ button {
 
 @media screen and (max-width: 780px) {
 
+
+
     .hero {
         flex-direction: column;
 
-    }
-
-    .hero-text {
-        justify-content: center;
     }
 
     .hero h1 {
@@ -204,9 +198,15 @@ button {
     }
 
     .hero-buttons button {
-        min-width: 320px;
+        max-width: 304px;
+        min-width: 304px;
+
     }
 
+    .hero-img img{
+        max-width: 304px;
+
+    }
 
     .hero p {
         font-size: 1rem;
@@ -217,12 +217,18 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
-        width:100%;
+        max-width:100%;
     }
 
     .who-we-are {
         flex-direction: column;
         gap:3rem;
+    }
+
+    .etherium {
+        display: flex;
+        justify-content: center;
+
     }
 
     .who-text {
@@ -239,13 +245,29 @@ button {
 
     .who-we-are button {
         align-items: center;
-        min-width: 320px;
+        min-width: 304px;
     }
     .who-we-are > div {
         width: 80%;
     }
-/* POSLEDNJI BUTTON CENTRIJRAJ */
-    .learn-more {
+    
+    .more {
+        display:flex;
+        justify-content: center;
         align-items: center;
+    }
+
+    nav {
+        padding: 0 2rem;
 
     }
+    .hamburger {
+        display:flex;
+    }
+    .menu {
+        display:none;
+    }
+    .buttons {
+        display:none;
+    }
+}
